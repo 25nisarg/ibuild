@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
-import { ArrowRightIcon, EyeIcon, icons, RocketIcon, SparklesIcon, UsersIcon } from "lucide-react";
+import { ArrowRightIcon, EyeIcon, RocketIcon, SparklesIcon, UsersIcon } from "lucide-react";
 import StatsCard from "./stats-card";
 
 const Livebadge = () => {
@@ -17,7 +17,7 @@ const Livebadge = () => {
 }
 const StatsData = [
     { icon: RocketIcon, value: "2.5K+", label: "Projects Shared" },
-    { icon: UsersIcon, value: "10K+", label: "Active Creators",hasBorder:"true" },
+    { icon: UsersIcon, value: "10K+", label: "Active Creators",hasBorder:true },
     { icon: EyeIcon, value: "50K+", label: "Monthly Visitors" },
 ]
 export default function HeroSection() {
