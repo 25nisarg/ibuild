@@ -2,29 +2,31 @@ import SectionHeader from "@/components/common/section-header";
 import { CalendarIcon, RocketIcon } from "lucide-react";
 import ProductCard from "@/components/products/product-card";
 import EmptyState from "@/components/common/empty-state";
+import { getRecentlyAddedProducts } from "@/lib/products/product-select";
 
-const recentlyLaunchedProducts = [
-    {
-        id: 1,
-        name: "Demo",
-        description: "Demo Product",
-        link: "www.demolink.com",
-        tags: ["ASI", "ML", "TOOL"],
-        votes: 600,
-        isFeatured: true,
-    },
-    {
-        id: 2,
-        name: "Demo 2",
-        description: "Demo Product 2",
-        link: "www.demolink.com",
-        tags: ["ASI", "ML", "TOOL"],
-        votes: 600,
-        isFeatured: true,
-    },
-]
+// const recentlyLaunchedProducts = [
+//     {
+//         id: 1,
+//         name: "Demo",
+//         description: "Demo Product",
+//         link: "www.demolink.com",
+//         tags: ["ASI", "ML", "TOOL"],
+//         votes: 600,
+//         isFeatured: true,
+//     },
+//     {
+//         id: 2,
+//         name: "Demo 2",
+//         description: "Demo Product 2",
+//         link: "www.demolink.com",
+//         tags: ["ASI", "ML", "TOOL"],
+//         votes: 600,
+//         isFeatured: true,
+//     },
+// ]
 
-export default function RecentlyLaunchedProducts() {
+export default async function RecentlyLaunchedProducts() {
+    const recentlyLaunchedProducts = await getRecentlyAddedProducts()
     return (
         <section className="py-20">
             <div className="wrapper space-y-12">

@@ -3,29 +3,31 @@ import { ArrowRightIcon, StarIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import ProductCard from "@/components/products/product-card";
+import { getFeaturedProducts } from "@/lib/products/product-select";
 
 
-const featuredProducts = [
-    {
-        id: 1,
-        name: "Demo",
-        description: "Demo Product",
-        link: "www.demolink.com",
-        tags: ["ASI", "ML", "TOOL"],
-        votes: 600,
-        isFeatured: true,
-    },
-    {
-        id: 2,
-        name: "Demo 2",
-        description: "Demo Product 2",
-        link: "www.demolink.com",
-        tags: ["ASI", "ML", "TOOL"],
-        votes: 600,
-        isFeatured: true,
-    },
-]
-export default function FeaturedProducts() {
+// const featuredProducts = [
+//     {
+//         id: 1,
+//         name: "Demo",
+//         description: "Demo Product",
+//         link: "www.demolink.com",
+//         tags: ["ASI", "ML", "TOOL"],
+//         votes: 600,
+//         isFeatured: true,
+//     },
+//     {
+//         id: 2,
+//         name: "Demo 2",
+//         description: "Demo Product 2",
+//         link: "www.demolink.com",
+//         tags: ["ASI", "ML", "TOOL"],
+//         votes: 600,
+//         isFeatured: true,
+//     },
+// ]
+export default async function FeaturedProducts() {
+    const featuredProducts = await getFeaturedProducts();
     return (
         <section className="py-20 bg-muted/20">
             <div className="wrapper">
