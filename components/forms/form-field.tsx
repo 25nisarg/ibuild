@@ -5,13 +5,13 @@ import { Textarea } from "../ui/textarea";
 interface FormFieldProps{
     label:string,
     name:string,
-    id:string,
     placeholder?:string,
     required?:boolean,
     onChange: (e:React.ChangeEvent<HTMLInputElement>|React.ChangeEvent<HTMLTextAreaElement>)=>void;
     error?:string,
     helperText?:string,
     textarea?:boolean
+    id:string,
 }
 
 export const FormField =({label,name,id,placeholder,required,onChange,error,helperText,textarea}:FormFieldProps)=>{
